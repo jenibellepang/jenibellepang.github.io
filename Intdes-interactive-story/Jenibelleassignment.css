@@ -118,7 +118,7 @@ body, html {
 }
 
 /* Gradient Backgrounds for Other Sections miga */
-#page1 { background: url('2ndpng.jpeg') no-repeat center center;
+#page1 { background: url('2ndpng.jpg') no-repeat center center;
     background-size: cover;
 }
 #page2 {
@@ -128,11 +128,11 @@ body, html {
 #page3 {background: url('studyai.jpg') no-repeat center center;
     background-size: cover;  }
 
-#page4 {background: url('music.jpg') no-repeat center center;
+#page4 {background: url('ai.jpg') no-repeat center center;
     background-size: cover;  }
 
 
-#page5 {background: url('ai.jpg') no-repeat center center;
+#page5 {background: url('music.jpg') no-repeat center center;
     background-size: cover;  }
 #page6 { background: linear-gradient(135deg, #FFB88C, #D84B16); }
 
