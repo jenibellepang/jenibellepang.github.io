@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=960, initial-scale=1.0">
+  <title>Grandpa AI's Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Open+Sans&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Jenibelleassignment.css">
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <!-- Back to Start Button -->
+  <button class="back-button" onclick="scrollToStart()">
+    <img src="https://cdn-icons-png.flaticon.com/512/60/60760.png" alt="Back Icon">
+    Back to Start
+  </button>
+
+  <!-- Welcome Page -->
+  <section class="section" id="welcome">
+    <div class="welcome-message">
+      <h1 class="typewriter">Help Save Grandpa AI!</h1>
+      <p class="subtext">
+        Grandpa AI is battling a swarm of misinformation bots! Learn from his extensive AI experience and answer all the questions in the showdown with the bots correctly and help him outsmart these bots. Otherwise, Grandpa AI will 
+        <br>
+        <span class="shutdown">SHUT DOWN FOREVER.</span>
+      </p>
+    </div>
+    <button class="nav-button" onclick="scrollToNext('page1')">Start</button>
+  </section>
+
+  <!-- Page 1 -->
+  <section class="section" id="page1">
+    <div class="page-container">
+      <div class="content active">
+      <h1>Hello, I’m Grandpa AI!</h1>
+        <p>I’ve been around since the dawn of artificial intelligence, watching it grow from simple ideas to world-changing innovations.</p>
+      </div>
+      <div class="content">
+        <h1>HELP ME!</h1>
+        <p>But now, I need your help! I’ve been captured by a swarm of cunning misinformation bots. They’ve locked me away in a digital maze, trying to silence my wisdom. The only way to free me is to outsmart them by reading through the lessons I’ve written and putting them into action.</p>
+      </div>
+      <button class="arrow left" onclick="prevContent('page1')">←</button>
+      <button class="arrow right" onclick="nextContent('page1')">→</button>
+    </div>
+    <button class="nav-button" onclick="scrollToNext('page2')">First Lesson</button>
+  </section>
+
+  <!-- Page 2 -->
+  <section class="section" id="page2">
+    <div class="page-container page2">
+      <div class="content active">
+        <h1>The Birth of AI</h1>
+        <p>Back in the 1950s, scientists dreamed of creating machines that could think. They coined the term "Artificial Intelligence" in 1956.</p>
+      </div>
+      <div class="content">
+        <h1>AI Development</h1>
+        <p>AI evolved from simple rule-based systems to complex neural networks capable of learning and adapting.</p>
+      </div>
+      <button class="arrow left" onclick="prevContent('page2')">←</button>
+      <button class="arrow right" onclick="nextContent('page2')">→</button>
+    </div>
+    <button class="nav-button" onclick="scrollToNext('page3')">Second Lesson</button>
+  </section>
+
+  <!-- Page 3 -->
+  <section class="section" id="page3">
+    <div class="page-container">
+      <div class="content active">
+        <h1>How AI Learns</h1>
+        <p>AI learns from vast amounts of data, like an athlete training for the Olympics. It’s all about pattern recognition.</p>
+      </div>
+      <div class="content">
+        <h1>Learning Methods</h1>
+        <p>Machine learning and deep learning are the two main approaches that help AI recognize patterns and make decisions.</p>
+      </div>
+      <button class="arrow left" onclick="prevContent('page3')">←</button>
+      <button class="arrow right" onclick="nextContent('page3')">→</button>
+    </div>
+    <button class="nav-button" onclick="scrollToNext('page4')">Third Lesson</button>
+  </section>
+
+  <!-- Page 4 -->
+  <section class="section" id="page4">
+    <div class="page-container">
+      <div class="content active">
+        <h1>What AI Can Create</h1>
+        <p>Today, AI can compose music, write stories, and generate stunning images. Tools like ChatGPT are changing how we create and imagine.</p>
+      </div>
+      <div class="content">
+        <h1>Creative Innovations</h1>
+        <p>AI-generated art and music are opening doors to new possibilities, sparking creativity in unexpected ways.</p>
+      </div>
+      <button class="arrow left" onclick="prevContent('page4')">←</button>
+      <button class="arrow right" onclick="nextContent('page4')">→</button>
+    </div>
+    <button class="nav-button" onclick="scrollToNext('page5')">Fourth Lesson</button>
+ 
+  </section>
+
+  <!-- Page 5 -->
+  <section class="section" id="page5">
+    <div class="page-container">
+      <div class="content active">
+        <h1>Examples of AI</h1>
+        <p>AI powers tools like Face ID and the TikTok algorithm, transforming how we interact with technology.</p>
+      </div>
+      <div class="content">
+        <h1>Real-Life Applications</h1>
+        <p>From healthcare to entertainment, AI is improving lives by making tasks faster, smarter, and more efficient.</p>
+      </div>
+      <button class="arrow left" onclick="prevContent('page5')">←</button>
+      <button class="arrow right" onclick="nextContent('page5')">→</button>
+      <button class="nav-button" onclick="scrollToNext('page6')">Take Quiz</button>
+    </div>
+  </section>
+<!-- Page 6: Multi-Question Timed Quiz -->
+<section class="section" id="page6">
+    <div class="page-container page6">
+      <div class="content active" style="padding: 20px; background: rgba(0, 0, 0, 0.6); padding: 40px;">
+        
+        <!-- Timer (hidden until quiz starts) -->
+        <div id="timer">
+          Time Left: <span id="time">60</span> s
+        </div>
+
+        <h1>Quiz Time!</h1>
+        <p style="color:#fff;">Answer the questions below to help Grandpa AI outsmart the bots!</p>
+
+        <!-- QUIZ CONTAINER (initially hidden until Start button is clicked) -->
+        <div id="quiz-container" class="quiz-container hidden">
+          <div id="question" class="quiz-question"></div>
+          <div id="answers" class="quiz-answers"></div>
+        </div>
+
+        <!-- Start / Next Buttons -->
+        <button id="start-btn" class="quiz-btn">Start Quiz</button>
+        <button id="next-btn" class="quiz-btn hidden">Next Question</button>
+
+        <!-- Score Display (shown after quiz ends) -->
+        <div id="score" class="quiz-score"></div>
+         <!-- Win and Lose Videos (Initially Hidden) --> 
+<div id="videos-container" class="hidden"> 
+  <video id="win-video" width="360" height="200" loop class="hidden"> 
+    <source src="grandpa survive.mp4" type="video/mp4"> 
+  </video> 
+   
+  <video id="lose-video" width="360" height="200" loop class="hidden"> 
+    <source src="0115.mp4" type="video/mp4"> 
+  </video> 
+</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Link to JS file -->
+  <script src="Jenibelleassignment.js"></script>
+</body>
+</html>

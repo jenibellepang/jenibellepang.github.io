@@ -1,0 +1,413 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif; /* Unified font for all pages */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 960px; /* Set fixed width for the viewport */
+    height: 540px; /* Set fixed height for the viewport */
+    background: #121212; /* Dark background for the entire body */
+}
+
+/* Section Styling */
+.section {
+    width: 960px; /* Ensure width is consistent across all sections */
+    height: 540px; /* Ensure height is consistent across all sections */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    animation: fadeIn 2s ease-out; /* Fade-in animation for sections */
+}
+
+/* Welcome Page Specific Styling */
+#welcome {
+    background: url('Welcome.jpg') no-repeat center center; /* Adjust the path as needed */
+    background-size: cover; /* Cover ensures no gaps, might crop image */
+    position: relative; /* Needed for absolute positioning of children */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+    text-align: center;
+    color: white;
+    max-width: 800px; /* Set a maximum width for readability */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for contrast */
+    border-radius: 10px; /* Rounded corners for the container */
+    position: relative; /* For absolute positioning of .typewriter */
+    margin-bottom: 20px; /* Space between message and button */
+}
+
+/* Typewriter effect for the headline */
+@keyframes typewriter {
+    from { width: 0; border-right: .15em solid black; }
+    to { width: 100%; border-right: .15em solid transparent; }
+}
+
+/* Typewriter Styling */
+.typewriter {
+    display: block; /* Centers the typewriter element */
+    margin: 0 auto; /* Centers the typewriter horizontally */
+    overflow: hidden; /* Ensures the content does not overflow */
+    white-space: nowrap; /* Keeps the text in a single line */
+    border-right: .15em solid black; /* Creates the cursor */
+    width: 0;
+    animation: typewriter 4s steps(40, end) 1s forwards; /* Typewriter effect */
+    font-size: 3rem; /* Larger font size for the headline */
+    font-family: 'Oswald', sans-serif; /* Changed font */
+    font-weight: bold; /* Make the title bold */
+}
+
+/* Subtext styling */
+.subtext {
+    font-size: 1.2rem; /* Smaller font size for detailed text */
+    color: #f0f0f0; /* Light color for readability */
+    font-family: 'Open Sans', sans-serif; /* Changed font for paragraph */
+    max-width: 600px; /* Restrict maximum width for better readability */
+    opacity: 0;
+    transition: opacity 4s ease-in-out; /* Fade-in effect */
+    animation: fadeIn 4s 5s forwards; /* Delayed fade-in */
+    margin: 0 auto; /* Center align the paragraph */
+    text-align: center; /* Ensure the text is centered */
+}
+
+/* Styling for SHUT DOWN */
+.shutdown {
+    display: block; /* Move to a new line */
+    font-family: 'Roboto Mono', monospace; /* Different font */
+    color: #ff4081; /* Bright color for emphasis */
+    font-size: 1.5rem; /* Increase size for more prominence */
+    font-weight: bold; /* Make it bold */
+    letter-spacing: 0.1em; /* Space out the letters slightly */
+    margin-top: 10px; /* Space above the shutdown text */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Start Button on Welcome Page (Position Adjusted) */
+#welcome .nav-button {
+    margin-top: 30px; /* Space between the button and the content */
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    background: #ff4081; /* Pink background for button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#welcome .nav-button:hover {
+    background: #ff77a9;
+    transform: scale(1.1);
+}
+
+/* Gradient Backgrounds for Other Sections miga */
+#page1 { background: url('2ndpng.jpeg') no-repeat center center;
+    background-size: cover;
+}
+#page2 {
+    background: url('firstpage.png') no-repeat center center;
+    background-size: cover;
+}
+#page3 {background: url('studyai.jpg') no-repeat center center;
+    background-size: cover;  }
+
+#page4 {background: url('music.jpg') no-repeat center center;
+    background-size: cover;  }
+
+
+#page5 {background: url('ai.jpg') no-repeat center center;
+    background-size: cover;  }
+#page6 { background: linear-gradient(135deg, #FFB88C, #D84B16); }
+
+/* Content Styling for All Sections */
+.content {
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Back to Start Button Styling */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #7421a0;
+    color: black;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    z-index: 999;
+}
+
+.back-button:hover {
+    transform: scale(1.1) rotate(-10deg);
+    background: #636bff;
+}
+
+.back-button img {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+} 
+
+/* Page 2 Container Styling */
+.page2-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page2-content {
+    display: none; /* Hide all content by default */
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 10px;
+    color: white;
+}
+
+.page2-content.active {
+    display: block; /* Show only the active content */
+}
+
+/* Navigation Arrows Styling */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    transition: background 0.3s;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, 0.8); /* Brighter background on hover */
+}
+
+.arrow.left {
+    left: 20px; /* Position left arrow */
+}
+
+.arrow.right {
+    right: 20px; /* Position right arrow */
+}
+/* Page Container */
+.page-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.page2 {
+    margin-top: 150px;
+}
+/* Content Container Styling */
+.content {
+    display: none;
+    text-align: center;
+    max-width: 700px;
+    padding: 35px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: white;
+}
+
+.content.active {
+    display: block;
+}
+
+/* Arrows Styling */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+.arrow.hidden {
+    display: none;
+}
+/* ------------------------------------------------ */
+/* Existing CSS from your code ... (not repeated)   */
+/* ------------------------------------------------ */
+
+/* Additional/Modified CSS for Multi-Question Quiz */
+#page6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page6 {
+    
+    background-image: url('dingus.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Timer in top-right corner (hidden until quiz starts) */
+#timer { 
+    position: absolute; 
+    top: 15%; /* Center vertically */ 
+    left: 50%; /* Center horizontally */ 
+    transform: translate(-50%, -50%); /* Adjust for true centering */ 
+    font-size: 1.5rem; /* Larger font for visibility */ 
+    color: #fff; 
+    padding: 10px; /* Add padding for better appearance */ 
+    border-radius: 12px; /* Rounded corners */ 
+    text-align: center; /* Center text alignment */ 
+    display: none; /* Initially hidden */ 
+}
+
+/* Quiz Container Styling */
+.quiz-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    color: #fff;
+}
+
+.quiz-question {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.quiz-answers {
+    margin-bottom: 20px;
+}
+
+/* Each answer option (radio) styling */
+.quiz-answers label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Start/Next buttons */
+.quiz-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 16px;
+    background-color: #001a36;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.quiz-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Score Display */
+.quiz-score {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #fff;
+    display: none; /* Shown after quiz ends */
+    text-align: center;
+}
+
+/* Utility class to hide/show elements */
+.hidden {
+    display: none;
+}
+.nav-button { 
+    margin-bottom: 70px;
+    margin-top: 30px; /* Space between the button and the content */ 
+    padding: 15px 25px; 
+    font-size: 1.2rem; 
+    background: #ff4081; /* Pink background for button */ 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+#video-container {    margin-top: 20px;
+    text-align: center;}
+#quiz-video {
+    border: 3px solid #fff;    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);}
+.hidden {    display: none;
+}
+/* Hidden by default */.hidden {
+    display: none;}
+    /* Video container styling */
+    #videos-container {  margin-top: 20px;
+      text-align: center;}
+      .arrow {  display: none; /* Initially hidden */
+}
+.arrow.active {  display: block; /* Shown dynamically based on logic */
+}
